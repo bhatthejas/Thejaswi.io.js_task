@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function total(games) {
+  // counter for total points
+  let totalPoints = 0;
+
+  for (const game of games) {
+    // split the game score for both teams and assign it to two variables
+    const [A, B] = game.split(":");
+
+    // calculate the points for this game with a ternary operator
+    const points = A > B ? 3 : A === B ? 1 : 0;
+
+    // add the points for this specific game to the total points
+    totalPoints += points;
+  }
+
+  return totalPoints;
+}
+console.log(total(["3:1", "2:2"]));
+    </script>
+</body>
+</html>

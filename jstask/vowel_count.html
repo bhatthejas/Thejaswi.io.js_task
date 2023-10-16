@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function getVowel(str)
+        {
+            let vowelcount=0;
+            let ar=str.split("");
+            for (let i =0 ;i< ar.length;i++) {
+                if(ar[i]=='a' || ar[i]=='e' || ar[i]=='i' ||ar[i]=='o' ||ar[i]=='u')
+                {  
+                    vowelcount++;
+                } 
+            }
+            return vowelcount;
+        }
+        console.log(getVowel("healloiou"));
+    </script>
+</body>
+</html>
